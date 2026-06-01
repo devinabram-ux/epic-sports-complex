@@ -1,0 +1,2903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KHWL31H2F4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KHWL31H2F4');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPIC Sports Complex — McComb, Mississippi</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --deep: #111318;
+    --gold: #D4A017;
+    --gold-light: #F0BE3D;
+    --red: #C1272D;
+    --white: #F5F3EE;
+    --gray: #8a8a8a;
+    --panel: #16191f;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { overflow-x: hidden; max-width: 100%; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212,160,23,0.08) 0%, transparent 70%),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.03) 79px,
+        rgba(255,255,255,0.03) 80px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.03) 79px,
+        rgba(255,255,255,0.03) 80px
+      ),
+      var(--black);
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 100%, rgba(193,39,45,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(5rem, 18vw, 14rem);
+    line-height: 0.88;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    opacity: 0;
+    animation: fadeUp 0.9s 0.4s forwards;
+  }
+
+  .hero-title span {
+    display: block;
+    color: var(--gold);
+    -webkit-text-stroke: 2px var(--gold);
+    color: transparent;
+  }
+
+  .hero-tagline {
+    font-family: 'Barlow', sans-serif;
+    font-size: clamp(1.1rem, 2.8vw, 1.6rem);
+    font-weight: 300;
+    color: var(--white);
+    margin-top: 1.2rem;
+    letter-spacing: 0.02em;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.55s forwards;
+  }
+
+  .hero-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.6s forwards;
+  }
+
+  .hero-acronym {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 1.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.75s forwards;
+  }
+
+  .hero-acronym span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(245,243,238,0.5);
+  }
+
+  .hero-acronym em {
+    font-style: normal;
+    color: var(--gold);
+    font-size: 1.1rem;
+  }
+
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--black);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 0;
+  }
+
+  .stats-bar-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+  }
+
+  .stats-bar-item {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s;
+  }
+
+  .stats-bar-item:last-child { border-right: none; }
+  .stats-bar-item:hover { background: rgba(212,160,23,0.04); }
+
+  .stats-bar-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stats-bar-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+    line-height: 1.4;
+  }
+
+  /* ── ACRONYM SECTION ── */
+  .acronym-section {
+    background: var(--black);
+    padding: 5rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .acronym-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    margin-top: 3rem;
+  }
+
+  .acronym-card {
+    background: var(--panel);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .acronym-card:hover { background: #1a1d24; }
+
+  .acronym-letter {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    display: block;
+    opacity: 0.15;
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    transition: opacity 0.3s;
+  }
+
+  .acronym-card:hover .acronym-letter { opacity: 0.25; }
+
+  .acronym-word {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+
+  .acronym-desc {
+    font-size: 0.9rem;
+    color: rgba(245,243,238,0.65);
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .hero-cta {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.8s forwards;
+  }
+
+  .btn {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.85rem 2.2rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fadeUp 1s 1.2s forwards;
+  }
+
+  .hero-scroll span {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s infinite;
+  }
+
+  /* ── TICKER ── */
+  .ticker {
+    background: var(--gold);
+    padding: 0.6rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ticker-inner {
+    display: inline-flex;
+    animation: ticker 20s linear infinite;
+  }
+
+  .ticker-item {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: var(--black);
+    padding: 0 3rem;
+  }
+
+  .ticker-dot {
+    color: var(--red);
+    margin: 0 0.5rem;
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 6rem 2rem; }
+
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(212,160,23,0.3);
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--deep);
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-text p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(245,243,238,0.75);
+    margin-bottom: 1.2rem;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .stat-box {
+    background: var(--panel);
+    padding: 2rem 1.5rem;
+    transition: background 0.2s;
+  }
+
+  .stat-box:hover { background: #1e2229; }
+
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  /* ── SPORTS ── */
+  .sports { background: var(--black); }
+
+  .sports-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    margin-top: 3rem;
+  }
+
+  .sport-card {
+    background: var(--panel);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+    cursor: default;
+  }
+
+  .sport-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .sport-card:hover { background: #1a1d24; }
+  .sport-card:hover::before { transform: scaleX(1); }
+
+  .sport-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+
+  .sport-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .sport-desc {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* ── HOURS ── */
+  .hours {
+    background: var(--gold);
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
+  .hours .section-title { color: var(--black); }
+  .hours .section-label { color: rgba(0,0,0,0.5); }
+  .hours .section-label::after { background: rgba(0,0,0,0.2); }
+
+  .hours-display {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 12vw, 9rem);
+    color: var(--black);
+    line-height: 1;
+    margin: 1rem 0;
+  }
+
+  .hours-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.6);
+  }
+
+  /* ── MEMBERSHIP ── */
+  .membership { background: var(--deep); }
+
+  .membership-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    margin-top: 3rem;
+  }
+
+  .tier-card {
+    background: var(--panel);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: background 0.2s;
+  }
+
+  .tier-card.featured {
+    background: #1a1d24;
+    border-top: 3px solid var(--gold);
+  }
+
+  .tier-card:hover { background: #1e2229; }
+
+  .tier-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .tier-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+
+  .tier-price {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .tier-price span {
+    font-size: 1rem;
+    color: var(--gray);
+    font-weight: 400;
+  }
+
+  .tier-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+    margin: 1.5rem 0;
+  }
+
+  .tier-features {
+    list-style: none;
+  }
+
+  .tier-features li {
+    font-size: 0.9rem;
+    color: rgba(245,243,238,0.7);
+    padding: 0.4rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .tier-features li::before {
+    content: '—';
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ── LOCATION ── */
+  .location {
+    background: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    padding: 0;
+  }
+
+  .location-text {
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .location-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(245,243,238,0.7);
+    margin-top: 1.2rem;
+    max-width: 420px;
+  }
+
+  .location-map {
+    background:
+      repeating-linear-gradient(
+        45deg,
+        rgba(212,160,23,0.04) 0px,
+        rgba(212,160,23,0.04) 1px,
+        transparent 1px,
+        transparent 40px
+      ),
+      var(--panel);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .map-pin {
+    text-align: center;
+  }
+
+  .map-pin-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+  }
+
+  .map-pin-text {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+  }
+
+  .map-pin-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 0.3rem;
+  }
+
+  /* ── CTA BANNER ── */
+  .cta-banner {
+    background: var(--red);
+    padding: 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-banner::before {
+    content: 'EPIC';
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30vw;
+    color: rgba(0,0,0,0.15);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .cta-banner .section-title {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    position: relative;
+  }
+
+  .cta-banner p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 550px;
+    margin: 1rem auto 2.5rem;
+    position: relative;
+    line-height: 1.7;
+  }
+
+  .cta-banner .btn-primary {
+    background: var(--white);
+    color: var(--red);
+    position: relative;
+  }
+
+  .cta-banner .btn-primary:hover { background: var(--gold); color: var(--black); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+
+  /* ── FOOTER ── */
+  footer {
+    background: #080808;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 4rem;
+    padding: 5rem 4rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    line-height: 1;
+  }
+
+  .footer-logo-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 1rem;
+  }
+
+  .footer-brand-desc {
+    font-size: 0.875rem;
+    color: rgba(245,243,238,0.45);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    max-width: 280px;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .social-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .social-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(212,160,23,0.08);
+  }
+
+  .footer-col-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-nav li {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: rgba(245,243,238,0.5);
+  }
+
+  .footer-nav a {
+    color: rgba(245,243,238,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-nav a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .footer-bottom-left {
+    font-size: 0.75rem;
+    color: rgba(138,138,138,0.5);
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-bottom-right {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(212,160,23,0.4);
+  }
+
+
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s, backdrop-filter 0.3s;
+  }
+
+  nav.scrolled {
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,243,238,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* ── MOCKUPS ── */
+  .mockups-section {
+    background: var(--deep);
+    padding: 6rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .mockup-tabs {
+    display: flex;
+    gap: 0;
+    margin-top: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .mtab {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    color: var(--gray);
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: -1px;
+  }
+
+  .mtab.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .mtab:hover { color: var(--white); }
+
+  .mockup-panel { margin-top: 2.5rem; }
+  .mockup-panel.hidden { display: none; }
+
+  /* Facility grid */
+  .facility-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .facility-card {
+    background: var(--panel);
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .facility-card:hover { border-color: rgba(212,160,23,0.3); transform: translateY(-3px); }
+
+  .facility-visual {
+    width: 100%;
+    aspect-ratio: 17/10;
+    overflow: hidden;
+  }
+
+  .facility-visual svg { width: 100%; height: 100%; display: block; }
+
+  .court-visual { background: #1a1006; }
+  .turf-visual  { background: #0d1a0d; }
+  .cage-visual  { background: #0f0f14; }
+
+  .facility-card-info { padding: 1.2rem 1.5rem 1.5rem; }
+
+  .facility-card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .facility-card-desc {
+    font-size: 0.85rem;
+    color: rgba(245,243,238,0.6);
+    line-height: 1.6;
+  }
+
+  /* Branding grid */
+  .branding-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .brand-card { background: var(--panel); border: 1px solid rgba(255,255,255,0.06); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+  .brand-card:hover { border-color: rgba(212,160,23,0.3); transform: translateY(-3px); }
+
+  .brand-visual {
+    aspect-ratio: 17/10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--black);
+  }
+
+  .brand-logo-display {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .brand-logo-e {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .brand-logo-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem;
+    color: var(--white);
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+
+  .brand-logo-full {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 0.1rem;
+  }
+
+  .brand-logo-tagline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(212,160,23,0.5);
+    margin-top: 0.2rem;
+  }
+
+  .sign-visual { background: #0a0a0a; }
+
+  .sign-mockup {
+    background: var(--black);
+    border: 3px solid var(--gold);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    min-width: 220px;
+  }
+
+  .sign-top {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+  }
+
+  .sign-divider { height: 1px; background: var(--gold); margin: 0.6rem 0; opacity: 0.4; }
+
+  .sign-bottom {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .sign-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-top: 0.3rem;
+  }
+
+  .merch-visual { background: #0a0a0a; }
+  .merch-visual svg { width: 55%; height: auto; }
+
+  /* App mockup */
+  .app-showcase {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .phone-frame {
+    width: 240px;
+    background: #1a1a1a;
+    border-radius: 36px;
+    border: 6px solid #333;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .phone-screen {
+    background: var(--black);
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-status-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 0.2rem;
+    font-size: 0.65rem;
+    color: var(--white);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+  }
+
+  .app-header {
+    background: var(--panel);
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .app-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  .app-greeting {
+    font-size: 0.7rem;
+    color: var(--gray);
+    font-family: 'Barlow', sans-serif;
+    margin-top: 0.1rem;
+  }
+
+  .app-card.membership-card-app {
+    margin: 0.8rem;
+    background: linear-gradient(135deg, #1a1006, #2a1e00);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+  }
+
+  .app-card-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gray);
+    text-transform: uppercase;
+  }
+
+  .app-card-tier {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  .app-card-id {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    color: rgba(245,243,238,0.5);
+    margin-top: 0.2rem;
+  }
+
+  .app-card-barcode {
+    margin-top: 0.5rem;
+    height: 24px;
+    background: repeating-linear-gradient(90deg, rgba(212,160,23,0.6) 0px, rgba(212,160,23,0.6) 2px, transparent 2px, transparent 5px);
+    border-radius: 2px;
+  }
+
+  .app-section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gray);
+    padding: 0.6rem 0.8rem 0.3rem;
+  }
+
+  .app-hours-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0.8rem;
+    background: rgba(212,160,23,0.1);
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 4px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .app-open {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #4caf50;
+  }
+
+  .app-time {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+
+  .app-slots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+    margin: 0.3rem 0.8rem;
+  }
+
+  .app-slot {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.4rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+
+  .app-slot small { font-size: 0.5rem; opacity: 0.7; }
+  .app-slot.available { background: rgba(212,160,23,0.15); color: var(--gold); border: 1px solid rgba(212,160,23,0.3); }
+  .app-slot.taken { background: rgba(255,255,255,0.04); color: var(--gray); border: 1px solid rgba(255,255,255,0.08); }
+
+  .app-nav-bar {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.7rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: var(--panel);
+    font-size: 1rem;
+  }
+
+  /* Member card */
+  .membership-card-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mc-front {
+    width: 280px;
+    background: linear-gradient(135deg, #1a1006 0%, #2d1f00 50%, #0a0a0a 100%);
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(212,160,23,0.2);
+  }
+
+  .mc-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .mc-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  .mc-tier-badge {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--gold);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+  }
+
+  .mc-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 0.2rem;
+  }
+
+  .mc-id {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+  }
+
+  .mc-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(212,160,23,0.2);
+    padding-top: 0.8rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,243,238,0.5);
+  }
+
+  .mc-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+    text-align: center;
+  }
+
+
+  /* ── GALLERY ── */
+  .gallery-section {
+    background: var(--black);
+    padding: 6rem 0 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .gallery-section .container {
+    padding: 0 2rem 3rem;
+  }
+
+  .gallery-intro {
+    font-size: 1.05rem;
+    color: rgba(245,243,238,0.65);
+    max-width: 560px;
+    line-height: 1.7;
+    margin-top: 1rem;
+  }
+
+  /* Hero strip */
+  .gallery-hero-strip {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4px;
+    margin-bottom: 4px;
+  }
+
+  .gallery-hero-stack {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .gallery-hero-main,
+  .gallery-hero-sub {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gallery-hero-main { height: 480px; }
+  .gallery-hero-sub  { height: 238px; }
+
+  .gallery-hero-main img,
+  .gallery-hero-sub img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.6) saturate(0.85);
+  }
+
+  /* CSS visual scenes */
+  .vis-basketball,
+  .vis-football,
+  .vis-baseball,
+  .vis-training,
+  .vis-facility,
+  .vis-tournament,
+  .vis-recovery {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+  }
+
+  /* Basketball court — hardwood amber + court lines */
+  .vis-basketball {
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px,
+        transparent 1px, transparent 60px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px,
+        transparent 1px, transparent 60px
+      ),
+      radial-gradient(ellipse 60% 40% at 50% 60%, rgba(212,160,23,0.25) 0%, transparent 70%),
+      linear-gradient(160deg, #2a1800 0%, #1a0f00 40%, #0d0800 100%);
+  }
+  .vis-basketball::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 38%; height: 60%;
+    border: 2px solid rgba(212,160,23,0.4);
+    border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+  }
+
+  /* Turf field — green with yard lines */
+  .vis-football {
+    background:
+      repeating-linear-gradient(
+        90deg,
+        rgba(0,40,0,0.5) 0px, rgba(0,40,0,0.5) 40px,
+        rgba(0,60,0,0.5) 40px, rgba(0,60,0,0.5) 80px
+      ),
+      radial-gradient(ellipse 80% 50% at 50% 80%, rgba(0,80,0,0.4) 0%, transparent 70%),
+      linear-gradient(180deg, #041204 0%, #071a07 50%, #040e04 100%);
+  }
+  .vis-football::before {
+    content: '';
+    position: absolute;
+    inset: 8%;
+    border: 2px solid rgba(255,255,255,0.15);
+  }
+  .vis-football::after {
+    content: '';
+    position: absolute;
+    top: 8%; bottom: 8%;
+    left: 50%; width: 1px;
+    background: rgba(255,255,255,0.2);
+  }
+
+  /* Batting cage — dark netting + spotlight */
+  .vis-baseball {
+    background:
+      repeating-linear-gradient(
+        45deg,
+        rgba(212,160,23,0.06) 0px, rgba(212,160,23,0.06) 1px,
+        transparent 1px, transparent 20px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        rgba(212,160,23,0.06) 0px, rgba(212,160,23,0.06) 1px,
+        transparent 1px, transparent 20px
+      ),
+      radial-gradient(ellipse 40% 60% at 30% 50%, rgba(255,220,100,0.12) 0%, transparent 60%),
+      linear-gradient(135deg, #0f0f14 0%, #181418 100%);
+  }
+
+  /* Training — dramatic spotlight on dark floor */
+  .vis-training {
+    background:
+      radial-gradient(ellipse 50% 70% at 40% 30%, rgba(212,160,23,0.2) 0%, transparent 60%),
+      radial-gradient(ellipse 30% 40% at 70% 70%, rgba(193,39,45,0.1) 0%, transparent 50%),
+      repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px,
+        transparent 1px, transparent 40px
+      ),
+      linear-gradient(160deg, #0a0a0f 0%, #12100a 100%);
+  }
+
+  /* Facility/lobby — clean modern interior */
+  .vis-facility {
+    background:
+      linear-gradient(135deg, rgba(212,160,23,0.12) 0%, transparent 50%),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px,
+        transparent 1px, transparent 80px
+      ),
+      linear-gradient(180deg, #1a1d24 0%, #111318 60%, #0a0a0f 100%);
+  }
+  .vis-facility::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 30%;
+    background: linear-gradient(to top, rgba(212,160,23,0.08), transparent);
+  }
+
+  /* Tournament — arena crowd feel */
+  .vis-tournament {
+    background:
+      radial-gradient(ellipse 80% 40% at 50% 80%, rgba(212,160,23,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 60% at 50% 20%, rgba(193,39,45,0.1) 0%, transparent 50%),
+      repeating-linear-gradient(
+        0deg,
+        rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px,
+        transparent 1px, transparent 30px
+      ),
+      linear-gradient(180deg, #050508 0%, #0d0d14 40%, #12100a 100%);
+  }
+
+  /* Recovery — soft cool tones */
+  .vis-recovery {
+    background:
+      radial-gradient(ellipse 60% 50% at 30% 40%, rgba(50,80,120,0.25) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 70% 60%, rgba(212,160,23,0.08) 0%, transparent 50%),
+      linear-gradient(135deg, #0a0f18 0%, #0f1420 60%, #080c10 100%);
+  }
+
+
+
+  /* Secondary row */
+  .gallery-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4px;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+  }
+
+  .gallery-item.tall { height: 260px; }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.6) saturate(0.8);
+  }
+
+  .gallery-hero-main, .gallery-hero-sub, .gallery-item {
+    position: relative;
+  }
+
+
+
+  /* Overlay labels */
+  .gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1.2rem 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.4) 50%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .gallery-tag {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--gold);
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .gallery-caption {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+
+  /* ── FEATURES ── */
+  .features-section {
+    background: var(--deep);
+    padding: 6rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .features-intro {
+    font-size: 1.05rem;
+    color: rgba(245,243,238,0.65);
+    max-width: 580px;
+    line-height: 1.7;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-left: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .feature-item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+    padding: 1.8rem 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-right: 1px solid rgba(255,255,255,0.06);
+    transition: background 0.2s;
+  }
+
+  .feature-item:hover { background: rgba(212,160,23,0.04); }
+
+  .feature-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  .feature-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .feature-desc {
+    font-size: 0.88rem;
+    color: rgba(245,243,238,0.6);
+    line-height: 1.65;
+  }
+
+
+  /* ── TOURNAMENTS ── */
+  .tournaments-section {
+    background: var(--black);
+    padding: 6rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .tournament-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    margin-top: 3rem;
+  }
+
+  .tournament-card {
+    background: var(--panel);
+    padding: 2.5rem 2rem;
+    transition: background 0.2s;
+  }
+
+  .tournament-card:hover { background: #1a1d24; }
+
+  .tournament-sport-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+  }
+
+  .tournament-stat-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .t-stat { flex: 1; }
+
+  .t-stat-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+
+  .t-stat-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .tournament-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin: 1.2rem 0;
+  }
+
+  .tournament-revenue {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  .tournament-revenue span {
+    font-size: 0.75rem;
+    color: var(--gray);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 0.1rem;
+  }
+
+  .tournament-desc {
+    font-size: 0.875rem;
+    color: rgba(245,243,238,0.6);
+    line-height: 1.65;
+  }
+
+  .tournament-total {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 1px;
+    background: var(--panel);
+    padding: 3rem;
+    border-top: none;
+  }
+
+  .tournament-total-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+  }
+
+  .tournament-total-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .tournament-total-sub {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .tournament-total-right p {
+    font-size: 0.95rem;
+    color: rgba(245,243,238,0.65);
+    line-height: 1.7;
+  }
+
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: var(--deep);
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    min-height: 600px;
+  }
+
+  .contact-left {
+    padding: 6rem 4rem;
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .contact-intro {
+    font-size: 1rem;
+    color: rgba(245,243,238,0.65);
+    line-height: 1.75;
+    margin-top: 1.2rem;
+    margin-bottom: 2.5rem;
+    max-width: 380px;
+  }
+
+  .contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    color: rgba(245,243,238,0.6);
+  }
+
+  .contact-info-icon { font-size: 1rem; flex-shrink: 0; }
+
+  .contact-right {
+    padding: 5rem 4rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-form-wrap { width: 100%; max-width: 520px; }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .form-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,243,238,0.6);
+  }
+
+  .form-input {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .form-input::placeholder { color: rgba(245,243,238,0.25); }
+  .form-input:focus { border-color: var(--gold); background: rgba(212,160,23,0.04); }
+
+  .form-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23D4A017' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .form-select option { background: #1a1d24; color: var(--white); }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 110px;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .form-submit {
+    width: 100%;
+    padding: 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.2em;
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+
+  .form-submit:hover { background: var(--gold-light); }
+
+  .form-note {
+    font-size: 0.75rem;
+    color: var(--gray);
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.1em;
+  }
+
+
+  /* ── ABOUT CALLOUTS ── */
+  .about-callouts {
+    display: flex;
+    gap: 0;
+    margin-top: 1.8rem;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .about-callout {
+    flex: 1;
+    padding: 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    background: rgba(212,160,23,0.03);
+  }
+
+  .about-callout:last-child { border-right: none; }
+
+  .about-callout-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .about-callout-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+    line-height: 1.3;
+  }
+
+
+  /* ── FAQ ── */
+  .faq-section {
+    background: var(--deep);
+    padding: 6rem 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .faq-grid {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .faq-toggle {
+    display: none;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    transition: background 0.2s;
+  }
+
+  .faq-item:last-child { border-bottom: none; }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    gap: 1rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  .faq-question:hover { background: rgba(212,160,23,0.03); }
+
+  .faq-icon {
+    font-size: 1.4rem;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform 0.3s;
+    line-height: 1;
+    display: inline-block;
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    font-size: 0.9rem;
+    color: rgba(245,243,238,0.65);
+    line-height: 1.75;
+    max-width: 780px;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+  }
+
+  .faq-toggle:checked ~ .faq-answer {
+    max-height: 400px;
+    padding: 0 2rem 1.4rem;
+  }
+
+  .faq-toggle:checked ~ .faq-question .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-toggle:checked ~ .faq-question {
+    color: var(--gold);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .sports-grid { grid-template-columns: 1fr 1fr; }
+    .acronym-grid { grid-template-columns: 1fr; }
+    .acronym-card { padding: 2rem 1.5rem; text-align: left; }
+    .acronym-letter { font-size: 4rem; }
+    .membership-grid { grid-template-columns: 1fr 1fr; }
+    .location { grid-template-columns: 1fr; }
+    .location-map { min-height: 300px; }
+    .location-text { padding: 3rem 2rem; }
+    .nav-links { display: none; }
+    .stats-bar-grid { grid-template-columns: repeat(3, 1fr); }
+    .stats-bar-item { border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1.8rem 1rem; }
+    .stats-bar-number { font-size: 2rem; }
+    .features-grid { grid-template-columns: 1fr; }
+    .tournament-grid { grid-template-columns: 1fr; }
+    .tournament-total { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem 1.5rem; }
+    .tournament-total-num { font-size: 3rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-left { padding: 4rem 2rem 3rem; }
+    .contact-right { padding: 3rem 2rem 4rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 2rem; }
+    .footer-bottom { padding: 1.5rem 2rem; flex-direction: column; text-align: center; }
+    .feature-item { padding: 1.4rem 1.2rem; }
+    .gallery-hero-strip { grid-template-columns: 1fr; }
+    .gallery-hero-main { height: 280px; }
+    .gallery-hero-sub { height: 200px; }
+    .gallery-row { grid-template-columns: 1fr 1fr; }
+    .gallery-item { height: 180px; }
+    .gallery-tag { font-size: 0.7rem; padding: 0.25rem 0.7rem; }
+    .gallery-caption { font-size: 0.85rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">EPIC</a>
+  <ul class="nav-links">
+    <li><a href="#sports">Sports</a></li>
+    <li><a href="#membership">Memberships</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#contact" class="btn btn-primary" style="padding:0.5rem 1.2rem;">Get In Touch</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-eyebrow">McComb, Mississippi &nbsp;·&nbsp; Southwest MS &amp; Southeast LA</div>
+  <h1 class="hero-title">
+    EPIC
+    <span>Sports</span>
+    Complex
+  </h1>
+  <p class="hero-tagline">Southwest Mississippi's First Year-Round Athletic Home.</p>
+  <p class="hero-sub">Extended-Hours &nbsp;·&nbsp; Multi-Sport &nbsp;·&nbsp; Year-Round &nbsp;·&nbsp; Community-Anchored</p>
+  <div class="hero-acronym">
+    <span><em>E</em>mpower</span>
+    <span><em>P</em>erform</span>
+    <span><em>I</em>nspire</span>
+    <span><em>C</em>onnect</span>
+  </div>
+  <div class="hero-cta">
+    <a href="#membership" class="btn btn-primary">Explore Memberships</a>
+    <a href="#sports" class="btn btn-outline">Our Facilities</a>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span class="ticker-item">Football <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Basketball <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Baseball <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Softball <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Open 5AM – Midnight Daily <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Year-Round Training <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Tournament Hosting <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Elite Athlete Development <span class="ticker-dot">◆</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">Football <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Basketball <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Baseball <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Softball <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Open 5AM – Midnight Daily <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Year-Round Training <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Tournament Hosting <span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">Elite Athlete Development <span class="ticker-dot">◆</span></span>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-bar-grid">
+    <div class="stats-bar-item">
+      <div class="stats-bar-number">$3.2M</div>
+      <div class="stats-bar-label">Total Project Investment</div>
+    </div>
+    <div class="stats-bar-item">
+      <div class="stats-bar-number">100K+</div>
+      <div class="stats-bar-label">Regional Residents Served</div>
+    </div>
+    <div class="stats-bar-item">
+      <div class="stats-bar-number">19 Hrs</div>
+      <div class="stats-bar-label">Open Daily — 5AM to Midnight</div>
+    </div>
+    <div class="stats-bar-item">
+      <div class="stats-bar-number">30K</div>
+      <div class="stats-bar-label">Addressable Youth Athletes</div>
+    </div>
+    <div class="stats-bar-item">
+      <div class="stats-bar-number">4</div>
+      <div class="stats-bar-label">Sports Under One Roof</div>
+    </div>
+    <div class="stats-bar-item">
+      <div class="stats-bar-number">$0</div>
+      <div class="stats-bar-label">Competing Facilities Within 1 Hour</div>
+    </div>
+  </div>
+</section>
+
+<!-- EPIC ACRONYM -->
+<section class="acronym-section">
+  <div class="container">
+    <div class="section-label">What EPIC Stands For</div>
+    <h2 class="section-title">More Than A Name</h2>
+    <div class="acronym-grid">
+      <div class="acronym-card">
+        <span class="acronym-letter">E</span>
+        <div class="acronym-word">Empower</div>
+        <p class="acronym-desc">We give athletes, families, and communities the tools, space, and confidence to reach their full potential — on and off the field.</p>
+      </div>
+      <div class="acronym-card">
+        <span class="acronym-letter">P</span>
+        <div class="acronym-word">Perform</div>
+        <p class="acronym-desc">World-class facilities built for serious competition. Four courts, indoor turf, batting cages — everything you need to train harder and compete better.</p>
+      </div>
+      <div class="acronym-card">
+        <span class="acronym-letter">I</span>
+        <div class="acronym-word">Inspire</div>
+        <p class="acronym-desc">Every young athlete who walks through our doors should leave believing more is possible. EPIC exists to spark that belief, every single day.</p>
+      </div>
+      <div class="acronym-card">
+        <span class="acronym-letter">C</span>
+        <div class="acronym-word">Connect</div>
+        <p class="acronym-desc">Sports bring people together. EPIC is the regional hub where athletes, coaches, families, schools, and businesses unite around a shared love of the game.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">The Region's First Real Athletic Home</h2>
+        <p>Southwest Mississippi and Southeast Louisiana has always produced elite athletes. For the first time, it has a facility to match them. EPIC Sports Complex is the only fully controlled, extended-hours, multi-sport training and competition center in the region.</p>
+        <p>No more driving two hours for a tournament. No more cancelled practices when it rains. No more letting talent walk out of the community for want of a place to grow.</p>
+        <a href="#contact" class="btn btn-primary" style="margin-top:1rem;">Join the Movement</a>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Full Basketball Courts</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">19hr</div>
+          <div class="stat-label">Daily Operations</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">100K+</div>
+          <div class="stat-label">Regional Residents Served</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Sports Under One Roof</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPORTS -->
+<section class="sports" id="sports">
+  <div class="container">
+    <div class="section-label">Facilities</div>
+    <h2 class="section-title">Built For Every Athlete</h2>
+    <div class="sports-grid">
+      <div class="sport-card">
+        <span class="sport-icon">🏈</span>
+        <div class="sport-name">Football</div>
+        <p class="sport-desc">Indoor turf for 7v7, speed training, and combine prep. Year-round, weather-proof.</p>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon">🏀</span>
+        <div class="sport-name">Basketball</div>
+        <p class="sport-desc">4 full courts. Tournament-ready layout. Open 5 AM to midnight with digital credential access.</p>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon">⚾</span>
+        <div class="sport-name">Baseball</div>
+        <p class="sport-desc">Batting cages and pitching lanes designed for serious development at every level.</p>
+      </div>
+      <div class="sport-card">
+        <span class="sport-icon">🥎</span>
+        <div class="sport-name">Softball</div>
+        <p class="sport-desc">Dedicated hitting and fielding zones for travel teams, clinics, and individual training.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section class="hours">
+  <div class="container">
+    <div class="section-label" style="justify-content:center;">Extended Hours</div>
+    <h2 class="section-title">We Never Close Early</h2>
+    <div class="hours-display">5AM – MIDNIGHT</div>
+    <p class="hours-sub">7 Days a Week &nbsp;·&nbsp; 365 Days a Year &nbsp;·&nbsp; Digital Access Included</p>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section class="membership" id="membership">
+  <div class="container">
+    <div class="section-label">Membership</div>
+    <h2 class="section-title">Your Level. Your Access.</h2>
+    <p class="features-intro">Eight tiers designed around how athletes, families, trainers, and teams actually use the facility. No single tier fits everyone — EPIC was built so everyone fits.</p>
+
+    <div class="membership-grid">
+
+      <div class="tier-card">
+        <div class="tier-badge">Ages 12–18</div>
+        <div class="tier-name">Youth / High School</div>
+        <div class="tier-price">$20<span>/mo</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Middle school & high school athletes</li>
+          <li>Travel team players</li>
+          <li>General facility access</li>
+          <li>Digital check-in credentials</li>
+          <li>Parent check-in/out alerts</li>
+        </ul>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge">Collegiate</div>
+        <div class="tier-name">College Athlete</div>
+        <div class="tier-price">$22<span>/mo</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Community college athletes</li>
+          <li>NCAA developmental players</li>
+          <li>General facility access</li>
+          <li>Extended-hours access</li>
+          <li>Digital check-in credentials</li>
+        </ul>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge">Recreational</div>
+        <div class="tier-name">Adult Base</div>
+        <div class="tier-price">$25<span>/mo</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Recreational players</li>
+          <li>Shift workers & pickup basketball</li>
+          <li>General facility access</li>
+          <li>Extended-hours access</li>
+          <li>Digital check-in credentials</li>
+        </ul>
+      </div>
+
+      <div class="tier-card featured">
+        <div class="tier-badge">Most Popular</div>
+        <div class="tier-name">Plus</div>
+        <div class="tier-price">$35<span>/mo</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Travel athletes & skill trainers</li>
+          <li>Batting cage access included</li>
+          <li>Priority court & turf booking</li>
+          <li>Extended-hours access</li>
+          <li>Discounted camp & clinic pricing</li>
+        </ul>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge">High Performance</div>
+        <div class="tier-name">Elite</div>
+        <div class="tier-price">$60<span>/mo</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Collegiate-level athletes</li>
+          <li>High-performance training access</li>
+          <li>Film study room access</li>
+          <li>Recovery zone included</li>
+          <li>Tournament registration discounts</li>
+        </ul>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge">Households</div>
+        <div class="tier-name">Family</div>
+        <div class="tier-price">$85<span>/mo</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Multi-child households</li>
+          <li>Homeschool groups</li>
+          <li>Access for entire immediate family</li>
+          <li>Parent check-in/out alerts</li>
+          <li>Discounted camp & clinic pricing</li>
+        </ul>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge">Programs</div>
+        <div class="tier-name">Team</div>
+        <div class="tier-price">$250<span>/mo per team</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>AAU, 7v7 & travel baseball/softball</li>
+          <li>Reserved court & turf blocks</li>
+          <li>Tournament entry discounts</li>
+          <li>Full roster digital access</li>
+          <li>Film study room access</li>
+        </ul>
+      </div>
+
+      <div class="tier-card">
+        <div class="tier-badge">Professionals</div>
+        <div class="tier-name">Coach / Trainer</div>
+        <div class="tier-price">$30<span>/mo</span></div>
+        <div class="tier-divider"></div>
+        <ul class="tier-features">
+          <li>Personal trainers & batting coaches</li>
+          <li>Speed & performance instructors</li>
+          <li>Client session access</li>
+          <li>Extended-hours access</li>
+          <li>Facility directory listing</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="container">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Everything In One Place</h2>
+    <p class="features-intro">EPIC was built so athletes never have to leave the region to get what they need. Every feature, every detail, designed around you.</p>
+
+    <div class="features-grid">
+
+      <div class="feature-item">
+        <div class="feature-icon">🏀</div>
+        <div class="feature-body">
+          <div class="feature-title">4 Full Basketball Courts</div>
+          <div class="feature-desc">Tournament-ready hardwood courts with digital credential access. Available for open play, league games, and private rentals.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🏈</div>
+        <div class="feature-body">
+          <div class="feature-title">Indoor Turf — 7v7 & Speed</div>
+          <div class="feature-desc">Full indoor turf field for football, 7v7 drills, combine prep, and speed training. No rain delays. No heat cancellations.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">⚾</div>
+        <div class="feature-body">
+          <div class="feature-title">Batting Cages — 3 Lanes</div>
+          <div class="feature-desc">Dedicated lanes for baseball and softball with pitching machines. Available for individual sessions, team rentals, and clinics.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🕔</div>
+        <div class="feature-body">
+          <div class="feature-title">Open 5AM – Midnight Daily</div>
+          <div class="feature-desc">19 hours a day, 365 days a year. Early morning grinders, late-night trainers, and shift workers all have a home here.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-body">
+          <div class="feature-title">Tournament Hosting</div>
+          <div class="feature-desc">Regional tournaments for basketball, 7v7, and baseball. Keep the competition — and the dollars — local.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">📱</div>
+        <div class="feature-body">
+          <div class="feature-title">Digital Access & Check-In</div>
+          <div class="feature-desc">Credential-based entry, parent check-in/out alerts, and court booking — all from your phone.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🎬</div>
+        <div class="feature-body">
+          <div class="feature-title">Film Study Room</div>
+          <div class="feature-desc">Dedicated space for coaches and athletes to break down film, study opponents, and sharpen IQ between sessions.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">💪</div>
+        <div class="feature-body">
+          <div class="feature-title">Recovery Zone</div>
+          <div class="feature-desc">Cool-down and recovery space for post-training sessions. Built for the athletes who put in the extra work.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🎓</div>
+        <div class="feature-body">
+          <div class="feature-title">Camps & Clinics</div>
+          <div class="feature-desc">Structured development programs run by coaches across all four sports. Youth through high school, beginner through elite.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🍔</div>
+        <div class="feature-body">
+          <div class="feature-title">Concessions & Merch Store</div>
+          <div class="feature-desc">On-site food, drinks, and EPIC gear. Everything you need without leaving the building.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">🔑</div>
+        <div class="feature-body">
+          <div class="feature-title">Private Court & Turf Rentals</div>
+          <div class="feature-desc">Reserve courts or turf by the hour for team practices, private training sessions, and group workouts. Flexible booking for all ages and skill levels.</div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">📍</div>
+        <div class="feature-body">
+          <div class="feature-title">McComb, Mississippi</div>
+          <div class="feature-desc">Centrally located to serve 100,000+ residents across Southwest MS and Southeast Louisiana. No more driving hours for what's right here.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOURNAMENTS -->
+<section class="tournaments-section" id="tournaments">
+  <div class="container">
+    <div class="section-label">Tournament Hosting</div>
+    <h2 class="section-title">Bring The Competition Here</h2>
+    <p class="features-intro">EPIC is built to host. No more sending regional tournament dollars out of the community — the courts, turf, and cages are right here.</p>
+
+    <div class="tournament-grid">
+
+      <div class="tournament-card">
+        <div class="tournament-sport-label">Basketball</div>
+        <div class="tournament-stat-row">
+          <div class="t-stat">
+            <div class="t-stat-num">24</div>
+            <div class="t-stat-label">Events / Year</div>
+          </div>
+          <div class="t-stat">
+            <div class="t-stat-num">20</div>
+            <div class="t-stat-label">Teams / Event</div>
+          </div>
+          <div class="t-stat">
+            <div class="t-stat-num">$300</div>
+            <div class="t-stat-label">Entry / Team</div>
+          </div>
+        </div>
+        <div class="tournament-divider"></div>
+        <div class="tournament-revenue">$144,000 <span>projected Year 1</span></div>
+        <p class="tournament-desc">Two tournaments per month on 4 full courts. Youth, travel, AAU, and adult leagues all welcome. Well below the 4-court capacity of 24 teams per event.</p>
+      </div>
+
+      <div class="tournament-card">
+        <div class="tournament-sport-label">7v7 Football</div>
+        <div class="tournament-stat-row">
+          <div class="t-stat">
+            <div class="t-stat-num">12</div>
+            <div class="t-stat-label">Events / Year</div>
+          </div>
+          <div class="t-stat">
+            <div class="t-stat-num">12</div>
+            <div class="t-stat-label">Teams / Event</div>
+          </div>
+          <div class="t-stat">
+            <div class="t-stat-num">$350</div>
+            <div class="t-stat-label">Entry / Team</div>
+          </div>
+        </div>
+        <div class="tournament-divider"></div>
+        <div class="tournament-revenue">$50,400 <span>projected Year 1</span></div>
+        <p class="tournament-desc">Monthly 7v7 events on full indoor turf. Highest demand in spring and summer. No weather cancellations — ever.</p>
+      </div>
+
+      <div class="tournament-card">
+        <div class="tournament-sport-label">Baseball & Softball</div>
+        <div class="tournament-stat-row">
+          <div class="t-stat">
+            <div class="t-stat-num">6</div>
+            <div class="t-stat-label">Events / Year</div>
+          </div>
+          <div class="t-stat">
+            <div class="t-stat-num">3</div>
+            <div class="t-stat-label">Cage Lanes</div>
+          </div>
+          <div class="t-stat">
+            <div class="t-stat-num">$7K</div>
+            <div class="t-stat-label">Year 1 Revenue</div>
+          </div>
+        </div>
+        <div class="tournament-divider"></div>
+        <div class="tournament-revenue">Growing <span>significant upside Year 2+</span></div>
+        <p class="tournament-desc">Indoor showcases, winter development tournaments, and batting clinics. Conservative Year 1 ramp with strong upside as the regional pipeline matures.</p>
+      </div>
+
+    </div>
+
+    <!-- Total callout -->
+    <div class="tournament-total">
+      <div class="tournament-total-left">
+        <div class="tournament-total-label">Total Projected Tournament Revenue</div>
+        <div class="tournament-total-num">$201,400</div>
+        <div class="tournament-total-sub">Year 1 · Conservative Estimate</div>
+      </div>
+      <div class="tournament-total-right">
+        <p>Tournaments are EPIC's highest-visibility revenue driver — generating concentrated income spikes while introducing new athletes and families to memberships, rentals, and programs.</p>
+        <a href="#contact" class="btn btn-primary" style="margin-top:1.2rem; display:inline-block;">Host Your Tournament</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="location" id="location">
+  <div class="location-text">
+    <div class="section-label">Find Us</div>
+    <h2 class="section-title">Right In The Heart Of It</h2>
+    <p>Located in McComb, Mississippi, EPIC sits at the center of a 100,000+ person trade area spanning Southwest MS and Southeast Louisiana — a region that's been driving hours to find what we're building right here.</p>
+    <p style="margin-top:0.5rem;">35–45 schools. 5–7 colleges. One facility that finally matches the talent.</p>
+    <a href="#contact" class="btn btn-outline" style="margin-top:2rem; display:inline-block;">Get Directions</a>
+  </div>
+  <div class="location-map">
+    <div class="map-pin">
+      <span class="map-pin-icon">📍</span>
+      <div class="map-pin-text">McComb, MS</div>
+      <div class="map-pin-sub">Southwest Mississippi</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Common Questions</h2>
+    <p class="features-intro">Everything you need to know before you walk through the doors.</p>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <input type="checkbox" id="faq0" class="faq-toggle"/>
+        <label class="faq-question" for="faq0">
+          <span>When does EPIC open?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">EPIC Sports Complex is currently in the development and funding phase. We are actively securing capital partners and finalizing construction timelines. Join our interest list to be the first notified when opening day is announced.</div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq1" class="faq-toggle"/>
+        <label class="faq-question" for="faq1">
+          <span>What are your hours?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">EPIC will operate 5AM to Midnight, 7 days a week, 365 days a year — 19 hours daily. Digital credential access means you can get in early morning or late night without needing staff on site.</div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq2" class="faq-toggle"/>
+        <label class="faq-question" for="faq2">
+          <span>How do I become a member?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">We offer 8 membership tiers starting at $20/month for youth athletes up to $250/month for team programs. Fill out the interest form to get on the charter membership list and lock in founding member pricing before we open.</div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq3" class="faq-toggle"/>
+        <label class="faq-question" for="faq3">
+          <span>Can I rent a court or the turf field?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">Yes. Basketball courts and the indoor turf field are available for hourly rentals. Members receive priority booking and discounted rates. Non-members can book available slots as well. Contact us to reserve your time.</div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq4" class="faq-toggle"/>
+        <label class="faq-question" for="faq4">
+          <span>How does youth check-in work?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">EPIC uses a parent-controlled digital check-in/check-out safety platform. Parents receive real-time push or text notifications when their child arrives or departs. Only pre-approved guardians can complete checkout, and all youth movement is digitally logged with timestamps.</div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq5" class="faq-toggle"/>
+        <label class="faq-question" for="faq5">
+          <span>Can my team host a tournament at EPIC?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">Absolutely. EPIC is designed to host regional tournaments for basketball, 7v7 football, baseball, and softball. We have 4 full courts, indoor turf, and batting cages all under one roof. Reach out through the contact form to discuss tournament dates and pricing.</div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq6" class="faq-toggle"/>
+        <label class="faq-question" for="faq6">
+          <span>Do you offer camps and clinics?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">Yes. EPIC will run structured development camps and clinics across all four sports. Programs are designed for youth through high school athletes at every skill level. Members receive discounted pricing on all camps and clinics.</div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq7" class="faq-toggle"/>
+        <label class="faq-question" for="faq7">
+          <span>How do I become a sponsor?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">EPIC offers four sponsorship tiers — Rookie Partner, Pro Partner, All-Star Partner, and Hall of Fame Partner. Contact us at epicsportcomplexms@gmail.com or call/text (601) 341-7790 to discuss partnership opportunities.</div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq8" class="faq-toggle"/>
+        <label class="faq-question" for="faq8">
+          <span>Where exactly is EPIC located?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">EPIC Sports Complex is located in Pike County, Mississippi, serving Southwest MS and Southeast Louisiana. A specific street address will be announced once the facility site is finalized. The complex is designed to be accessible within a one-hour drive for over 100,000 regional residents.</div>
+      </div>
+      <div class="faq-item">
+        <input type="checkbox" id="faq9" class="faq-toggle"/>
+        <label class="faq-question" for="faq9">
+          <span>Is EPIC only for elite athletes?</span>
+          <span class="faq-icon">+</span>
+        </label>
+        <div class="faq-answer">Not at all. EPIC is built for everyone — from recreational adults and youth beginners to travel teams and collegiate-level athletes. Our 8 membership tiers are specifically designed so that every type of athlete and family can find a home here at a price that makes sense.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-grid">
+
+    <div class="contact-left">
+      <div class="section-label">Get Involved</div>
+      <h2 class="section-title">Be First.<br>Be EPIC.</h2>
+      <p class="contact-intro">Charter memberships, sponsorship opportunities, and tournament reservations are available now. Fill out the form and we'll be in touch.</p>
+
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <span class="contact-info-icon">📍</span>
+          <span>McComb, Mississippi · Southwest MS</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">🕔</span>
+          <span>Opening Hours: 5AM – Midnight Daily</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">📧</span>
+          <span>epicsportcomplexms@gmail.com</span>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-info-icon">📲</span>
+          <a href="tel:6013417790" style="color:inherit;text-decoration:none;">(601) 341-7790</a>
+        </div>
+      </div>
+
+      <a href="sms:6013417790?body=Hi, I'm interested in EPIC Sports Complex!" class="btn btn-outline" style="margin-top:2rem; display:inline-block; font-size:0.8rem;">💬 Text Us Directly</a>
+
+    </div>
+
+    <div class="contact-right">
+      <div class="contact-form-wrap">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" class="form-input" placeholder="John"/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-input" placeholder="Doe"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" placeholder="you@email.com"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-input" placeholder="(601) 000-0000"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">I'm Interested In</label>
+          <select class="form-input form-select">
+            <option value="" disabled selected>Select one...</option>
+            <option>Charter Membership</option>
+            <option>Tournament Hosting</option>
+            <option>Facility Rental</option>
+            <option>Sponsorship Opportunity</option>
+            <option>Camps & Clinics</option>
+            <option>Team Membership</option>
+            <option>General Information</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Message <span style="color:var(--gray);font-weight:400;">(optional)</span></label>
+          <textarea class="form-input form-textarea" placeholder="Tell us about yourself, your team, or your interest..."></textarea>
+        </div>
+
+        <button class="btn btn-primary form-submit" onclick="handleSubmit(this)">Submit Interest →</button>
+
+        <div class="form-note">No commitment required. We'll reach out within 48 hours.</div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">EPIC</div>
+      <div class="footer-logo-sub">Sports Complex</div>
+      <p class="footer-brand-desc">Southwest Mississippi's first year-round, extended-hours, multi-sport athletic facility. Built for athletes. Anchored in the community.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-btn" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" class="social-btn" title="Twitter / X">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" class="social-btn" title="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Navigate</div>
+      <ul class="footer-nav">
+        <li><a href="#about">About EPIC</a></li>
+        <li><a href="#sports">Facilities</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#membership">Memberships</a></li>
+        <li><a href="#tournaments">Tournaments</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Sports</div>
+      <ul class="footer-nav">
+        <li><a href="#sports">🏀 Basketball</a></li>
+        <li><a href="#sports">🏈 Football / 7v7</a></li>
+        <li><a href="#sports">⚾ Baseball</a></li>
+        <li><a href="#sports">🥎 Softball</a></li>
+      </ul>
+      <div class="footer-col-title" style="margin-top:1.5rem;">Hours</div>
+      <ul class="footer-nav">
+        <li>Open Daily</li>
+        <li style="color:var(--gold);">5AM – Midnight</li>
+        <li>365 Days a Year</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-nav">
+        <li>📍 Pike County, Mississippi</li>
+        <li>Southwest MS &amp; Southeast LA</li>
+        <li style="margin-top:0.8rem;">📧 <a href="mailto:epicsportcomplexms@gmail.com">epicsportcomplexms@gmail.com</a></li>
+        <li style="margin-top:0.5rem;">📲 <a href="tel:6013417790">(601) 341-7790</a></li>
+        <li style="margin-top:0.8rem; color:var(--gray); font-size:0.8rem;">Social media handles coming soon.<br/>Follow us when we launch.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">© 2026 EPIC Sports Complex · Pike County, Mississippi · All rights reserved.</div>
+    <div class="footer-bottom-right">
+      Empower &nbsp;·&nbsp; Perform &nbsp;·&nbsp; Inspire &nbsp;·&nbsp; Connect
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Form submit — builds SMS and opens Messages app
+  function handleSubmit(btn) {
+    try {
+      var firstName = document.querySelector('input[placeholder="John"]').value || '';
+      var lastName  = document.querySelector('input[placeholder="Doe"]').value || '';
+      var email     = document.querySelector('input[placeholder="you@email.com"]').value || '';
+      var phone     = document.querySelector('input[placeholder="(601) 000-0000"]').value || '';
+      var interest  = document.querySelector('.form-select').value || '';
+      var message   = document.querySelector('.form-textarea').value || '';
+
+      var name = (firstName + ' ' + lastName).trim() || 'Someone';
+
+      var sms = 'New EPIC Interest Form:%0A'
+        + 'Name: ' + name + '%0A'
+        + 'Email: ' + email + '%0A'
+        + 'Phone: ' + phone + '%0A'
+        + 'Interest: ' + interest + '%0A'
+        + (message ? 'Message: ' + message : '');
+
+      window.location.href = 'sms:6013417790?body=' + sms;
+
+      btn.textContent = '✓ Submitted — We\'ll Be In Touch!';
+      btn.style.background = '#2d6a2d';
+      btn.style.color = '#fff';
+      btn.disabled = true;
+    } catch(e) {
+      btn.textContent = '✓ Submitted — We\'ll Be In Touch!';
+      btn.style.background = '#2d6a2d';
+      btn.style.color = '#fff';
+      btn.disabled = true;
+    }
+  }
+
+  // Navbar scroll effect
+  document.addEventListener('DOMContentLoaded', function() {
+
+    // Navbar scroll
+    var navbar = document.getElementById('navbar');
+    if (navbar) {
+      window.addEventListener('scroll', function() {
+        navbar.classList.toggle('scrolled', window.scrollY > 60);
+      });
+    }
+
+  });
+</script>
+</body>
+</html>
